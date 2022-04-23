@@ -1,0 +1,13 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: aliceblue;
+    padding: 0 10px;
+}
+
+.header-title{
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: capitalize;
+}

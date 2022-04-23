@@ -1,0 +1,10 @@
+.header-menu{
+    list-style-type: none;
+    display: flex;
+}
+
+.header-menu li{
+    display: block;
+    padding: 10px 5px;
+
+}

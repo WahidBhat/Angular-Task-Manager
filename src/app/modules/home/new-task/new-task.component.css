@@ -1,0 +1,22 @@
+.new-task{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.input-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width: 400px;
+}
+
+.input-container input[type=text]{
+    height: 30px;
+    width: 90%;
+}
+
+.new-task button{
+    width: 10%;
+}
