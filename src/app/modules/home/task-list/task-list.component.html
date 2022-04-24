@@ -1,1 +1,23 @@
-<p>task-list works!</p>
+<div class="task-list-container">
+<table class="table table-hover" striped="true" hover="true">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">Id </th>
+        <th scope="col">Name </th>
+        <th scope="col">Reminder </th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let task of tasks; let i =index;" (mouseenter)="activeRow=i" (mouseleave)="activeRow=99999">
+        <th scope="row">{{ task.id }}</th>
+        <td>{{ task.name }}</td>
+        <td><i [hidden]="!task.reminder" class="bi bi-check-lg"></i></td>
+        <td>
+            <i *ngIf="activeRow==i" class="bi bi-trash" (click)="deleteTask(task.id)"></i>
+            <i *ngIf="activeRow==i" class="bi bi-pencil-square" (click)="editTask(task)"></i>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

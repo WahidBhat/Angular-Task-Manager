@@ -1,2 +1,2 @@
-<app-new-task></app-new-task>
-<app-task-list></app-task-list>
+<app-new-task (task-added)="taskList.refreshTaskList()" (task-updated)="taskList.refreshTaskList()" #newTask></app-new-task>
+<app-task-list #taskList (total-tasks)="newTask.resetNewTask($event)" (edit-task)="newTask.editTask($event)"></app-task-list>

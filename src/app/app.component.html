@@ -1,3 +1,7 @@
-<app-header-container [headerTitle]="title"></app-header-container>
-<app-home></app-home>
-<app-footer></app-footer>
+<div id="main-body">
+    <app-header-container [headerTitle]="title"></app-header-container>
+    <div id="main-content">
+        <router-outlet></router-outlet>
+    </div>
+    <app-footer></app-footer>
+</div>

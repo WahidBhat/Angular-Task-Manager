@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 
 @Component({
   selector: 'app-footer-item',
@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterItemComponent implements OnInit {
 
+@Input() routeLink:string="";
+@Input() routeName:string="";
   constructor() { }
 
   ngOnInit(): void {

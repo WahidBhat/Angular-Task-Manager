@@ -1,7 +1,17 @@
-<form class="new-task">
-    <div class="input-container">
-    <input type="text" [value]="taskName" [placeholder]="placeholder">
-    <input type="checkbox" [checked]="reminder">
+<div class="new-task-container">
+<div [hidden]="!visible">
+    <form (ngSubmit)="onSubmit();newTaskForm.resetForm();" #newTaskForm="ngForm" class="new-task">
+        <mat-form-field appearance="outline">
+            <mat-label>Enter task name</mat-label>
+            <input matInput [(ngModel)]="task.name" name="name" #name="ngModel" required="required">
+
+        </mat-form-field>
+        <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+            Name is required
+        </div>
+        <mat-checkbox [(ngModel)]="task.reminder" name="reminder">Set Reminder</mat-checkbox>
+        <button [disabled]="!newTaskForm.form.valid" mat-raised-button color="primary" type="submit">{{isEdit?"Update":"Add"}} Task</button>
+    </form>
 </div>
-    <button type="submit">Add Task</button>
-</form>
+<button mat-raised-button color="primary" type="button" (click)="toggleNewTask()">{{visible?"Close":"New"}} Task</button>
+</div>

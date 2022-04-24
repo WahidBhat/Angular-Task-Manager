@@ -1,5 +1,16 @@
-<ul class="header-menu">
-    <li>Home</li>
-    <li>Contact us</li>
+<!-- <ul class="header-menu">
+    <li><a routerLink="/home">Home</a></li>
+    <li><a routerLink="/contactus">Contact us</a></li>
     <li>About us</li>
-</ul>
+</ul> -->
+
+<ul ngbNav #nav="ngbNav" class="nav-tabs">
+    <li ngbNavItem>
+      <a ngbNavLink routerLink="/home">Home</a>
+      <ng-template ngbNavContent>First content</ng-template>
+    </li>
+    <li ngbNavItem>
+      <a ngbNavLink routerLink="/contactus">Contact us</a>
+      <ng-template ngbNavContent>Second content</ng-template>
+    </li>
+  </ul>

@@ -1,11 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import '../node_modules/bootstrap-icons/font/bootstrap-icons';
 
 app-footer{
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 200px;
+    height: 150px;
     background-color: aliceblue;
 }
 

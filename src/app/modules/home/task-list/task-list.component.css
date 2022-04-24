@@ -1,0 +1,10 @@
+.task-list-container{
+    padding: 40px;
+    width: 100%;
+}
+table{
+    width: 60%;
+}
+td{
+    padding: 5px 0;
+}
