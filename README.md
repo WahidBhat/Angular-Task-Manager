@@ -1,6 +1,6 @@
 # Angular-Task-Manager
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.3.
+This is a demo project developed in Angular to demonstrate the basic setup, forms, services and basic routing in Angular.
 
 ## Development server
 
